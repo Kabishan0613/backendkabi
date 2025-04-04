@@ -2,3 +2,5 @@ fastapi
 uvicorn
 sqlalchemy
 pydantic
+pymongo[srv]==4.6.0
+certifi==2023.7.22
