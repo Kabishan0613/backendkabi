@@ -3,8 +3,8 @@ from pymongo import MongoClient
 # MongoDB Database URL
 DATABASE_URL = "mongodb://socialease:sgkl01031308@localhost:27017"
 
-# Create MongoDB Client
-client = MongoClient("mongodb+srv://socialease:sgkl01031308@cluster0.yo2mm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+# Create MongoDB Client with updated parameters
+client = MongoClient("mongodb+srv://socialease:sgkl01031308@cluster0.yo2mm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=false")
 
 # Access the database
 db = client["socialease"]
@@ -15,11 +15,6 @@ document = {
     "day": 7,
     "score": 100
 }
-
-
-
-
-
 
 insert_doc = collection.insert_one(document)
 
