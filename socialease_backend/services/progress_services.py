@@ -104,8 +104,8 @@ if __name__ == "__main__":
     from pymongo import MongoClient
     from socialease_backend.schemas import ProgressSchema
 
-    # Create a test MongoDB client
-    client = MongoClient("mongodb+srv://socialease:sgkl01031308@cluster0.yo2mm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    # Create a test MongoDB client with updated parameters
+    client = MongoClient("mongodb+srv://socialease:sgkl01031308@cluster0.yo2mm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=false")
     db = client["socialease"]
 
     # Corrected test data
