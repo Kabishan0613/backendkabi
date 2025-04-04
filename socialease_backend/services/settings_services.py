@@ -1,4 +1,4 @@
-from schemas import NotificationSettingsSchema
+from socialease_backend.schemas import NotificationSettingsSchema
 
 def get_settings(db, user_id: int):
     return db["notification_settings"].find_one({"user_id": user_id})  # Query MongoDB collection
