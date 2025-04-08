@@ -13,7 +13,7 @@ def add_progress(db, progress: ProgressSchema):
         "score": progress.score
     }
     db["progress"].insert_one(new_progress)  # Insert into MongoDB collection
-    return new_progress  # Removed print statement
+    return new_progress  
 
 def get_progress(db, user_id: int):
     progress_data = list(db["progress"].find({"user_id": user_id}))  # Query MongoDB collection
